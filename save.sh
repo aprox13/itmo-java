@@ -1,4 +1,5 @@
 ( cd "run/" && sh clear.sh )
 git add .
-git commit -m "$@"
+git status
+git commit -m "update"
 git push origin master
