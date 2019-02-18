@@ -1,0 +1,1 @@
+sh run.sh --user belyaev -tp student -t StudentQuery --solve StudentDB $@

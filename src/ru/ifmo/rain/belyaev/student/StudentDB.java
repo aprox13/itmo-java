@@ -3,6 +3,7 @@ package ru.ifmo.rain.belyaev.student;
 import info.kgeorgiy.java.advanced.student.Student;
 
 import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -13,12 +14,16 @@ public class StudentDB implements info.kgeorgiy.java.advanced.student.StudentQue
 
     private static final String DEFAULT_RESULT = "";
 
+    private Comparator<Student> namesOrder = Comparator
+            .comparing(Student::getLastName)
+            .thenComparing(Student::getFirstName)
+            .thenComparing(Student::getId);
+
     private <R> Stream<R> mappedStream(final Collection<Student> students, Function<Student, R> function){
         return students.stream().map(function);
     }
 
-
-    private List<String> toList(final Collection<Student> students, Function<Student, String> function){
+    private List<String> toListBy(final Collection<Student> students, Function<Student, String> function){
         return mappedStream(students, function).collect(Collectors.toList());
     }
 
@@ -26,36 +31,34 @@ public class StudentDB implements info.kgeorgiy.java.advanced.student.StudentQue
         return students.stream().sorted(comparator).collect(Collectors.toList());
     }
 
-    private Stream<Student> filter(final Collection<Student> students, Predicate<Student> filter){
-        return sortStudentsByName(students).stream().filter(filter);
-    }
-
     private List<Student> findBy(final Collection<Student> students, Predicate<Student> filter){
-        return filter(students, filter).collect(Collectors.toList());
+        return getFilteredStream(students, filter).sorted(namesOrder).collect(Collectors.toList());
     }
 
-
+    private <E> Stream<E> getFilteredStream(Collection<E> collection, Predicate<E> filter){
+        return collection.stream().filter(filter);
+    }
 
 
 
     @Override
     public List<String> getFirstNames(List<Student> students) {
-        return toList(students, Student::getFirstName);
+        return toListBy(students, Student::getFirstName);
     }
 
     @Override
     public List<String> getLastNames(List<Student> students) {
-        return toList(students, Student::getLastName);
+        return toListBy(students, Student::getLastName);
     }
 
     @Override
     public List<String> getGroups(List<Student> students) {
-        return toList(students, Student::getGroup);
+        return toListBy(students, Student::getGroup);
     }
 
     @Override
     public List<String> getFullNames(List<Student> students) {
-        return toList(students, student -> String.format("%s %s", student.getFirstName(), student.getLastName()));
+        return toListBy(students, student -> String.format("%s %s", student.getFirstName(), student.getLastName()));
     }
 
     @Override
@@ -75,16 +78,8 @@ public class StudentDB implements info.kgeorgiy.java.advanced.student.StudentQue
 
     @Override
     public List<Student> sortStudentsByName(Collection<Student> students) {
-        return sortBy(students,
-                Comparator
-                .comparing(Student::getLastName)
-                .thenComparing(Student::getFirstName)
-                .thenComparing(Student::getId)
-        );
+        return sortBy(students, namesOrder);
     }
-
-
-
 
     @Override
     public List<Student> findStudentsByFirstName(Collection<Student> students, String name) {
@@ -103,11 +98,10 @@ public class StudentDB implements info.kgeorgiy.java.advanced.student.StudentQue
 
     @Override
     public Map<String, String> findStudentNamesByGroup(Collection<Student> students, String group) {
-        return null;
+        return getFilteredStream(students, student -> student.getGroup().equals(group))
+                .collect(Collectors.toMap(Student::getLastName, Student::getFirstName, BinaryOperator.minBy(String::compareTo)));
     }
 
-    @Override
-    public List<Map.Entry<String, String>> findStudentNamesByGroupList(List<Student> students, String group) {
-        return null;
-    }
+
+
 }
