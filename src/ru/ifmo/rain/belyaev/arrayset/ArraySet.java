@@ -2,7 +2,7 @@ package ru.ifmo.rain.belyaev.arrayset;
 
 import java.util.*;
 
-public class ArraySet<E> extends AbstractCollection<E> implements SortedSet<E> {
+public class ArraySet<E> extends AbstractSet<E> implements SortedSet<E> {
 
     private final List<E> data;
     private final Comparator<? super E> comparator;
@@ -71,21 +71,19 @@ public class ArraySet<E> extends AbstractCollection<E> implements SortedSet<E> {
 
     @Override
     public E first() {
-        requireNonEmpty();
-        return data.get(0);
+        return requireNonEmpty(data).get(0);
     }
 
     @Override
     public E last() {
-        requireNonEmpty();
-        return data.get(size() - 1);
+        return requireNonEmpty(data).get(size() - 1);
     }
 
     private boolean isCorrectIndex(int index) {
         return 0 <= index && index < size();
     }
 
-    private int indexOf(E element, int found, int notFound) {
+    private int indexOf(final E element, int found, int notFound) {
         int index = Collections.binarySearch(data, Objects.requireNonNull(element), comparator);
         if (index < 0) {
             index = -index - 1;
@@ -94,16 +92,23 @@ public class ArraySet<E> extends AbstractCollection<E> implements SortedSet<E> {
         return isCorrectIndex(index + found) ? index + found : -1;
     }
 
+    private int indexOf(final E element){
+        return indexOf(element, 0, 0);
+    }
 
-    private void requireNonEmpty() {
+
+    private List<E> requireNonEmpty(final List<E> data) {
         if (data.isEmpty()) {
             throw new NoSuchElementException();
         }
+        return data;
     }
 
-    private SortedSet<E> sub(E from, E to, boolean inclusiveTo) {
-        int startIndex = indexOf(from, 0, 0);
-        int endIndex = inclusiveTo ? indexOf(to, 0, -1) : indexOf(to, -1, -1);
+    private SortedSet<E> sub(final E from, final E to, boolean inclusiveTo) {
+        int startIndex = indexOf(from);
+        int endIndex = inclusiveTo ?
+                indexOf(to, 0, -1) :
+                indexOf(to, -1, -1);
         if (startIndex > endIndex || startIndex == -1 || endIndex == -1) {
             return new ArraySet<>(comparator);
         }
