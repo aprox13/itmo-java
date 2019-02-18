@@ -83,16 +83,16 @@ public class ArraySet<E> extends AbstractSet<E> implements SortedSet<E> {
         return 0 <= index && index < size();
     }
 
-    private int indexOf(final E element, int found, int notFound) {
+    private int indexOf(final E element, int shiftFound, int shiftNotFound) {
         int index = Collections.binarySearch(data, Objects.requireNonNull(element), comparator);
         if (index < 0) {
             index = -index - 1;
-            return isCorrectIndex(index + notFound) ? index + notFound : -1;
+            return isCorrectIndex(index + shiftNotFound) ? index + shiftNotFound : -1;
         }
-        return isCorrectIndex(index + found) ? index + found : -1;
+        return isCorrectIndex(index + shiftFound) ? index + shiftFound : -1;
     }
 
-    private int indexOf(final E element){
+    private int indexOf(final E element) {
         return indexOf(element, 0, 0);
     }
 
@@ -112,6 +112,7 @@ public class ArraySet<E> extends AbstractSet<E> implements SortedSet<E> {
         if (startIndex > endIndex || startIndex == -1 || endIndex == -1) {
             return new ArraySet<>(comparator);
         }
+
         return new ArraySet<>(data.subList(startIndex, endIndex + 1), comparator);
     }
 
