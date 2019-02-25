@@ -1,1 +1,1 @@
-sh run.sh --user belyaev -tp student -t StudentQuery --solve StudentDB $@
+sh run.sh --user belyaev -tp student -t StudentGroupQuery --solve StudentDB $@

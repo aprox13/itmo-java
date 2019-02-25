@@ -27,6 +27,10 @@ public class ArraySet<E> extends AbstractSet<E> implements SortedSet<E> {
         data = new ArrayList<>(tempSet);
     }
 
+    private ArraySet(List<E> list, Comparator<? super E> comparator ){
+        data = list;
+        this.comparator = comparator;
+    }
 
     // AbstractCollection
 
