@@ -12,7 +12,10 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -83,14 +86,13 @@ public class Implementor implements Impler {
                     return null;
                 }
                 Method method = (Method) executable;
-
                 Class<?> returnType = method.getReturnType();
-                if (returnType == void.class) {
-                    return "return;";
-                }
                 if (!returnType.isPrimitive()) {
                     return "return null;";
                 } else {
+                    if (returnType == void.class) {
+                        return "return;";
+                    }
                     if (returnType == boolean.class) {
                         return "return false;";
                     }
@@ -156,20 +158,20 @@ public class Implementor implements Impler {
 
         implementedMethodsMap = new HashMap<>();
 
-        root = getPathToCreatedJavaFile(token, root);
+        root = getPathToJavaFile(token, root);
         createDirectory(root);
 
         String result = getGeneratedClass(token);
         try (BufferedWriter outFile = Files.newBufferedWriter(root)) {
             outFile.write(result);
         } catch (IOException e) {
-            System.out.println("Error with opening output file");
+            throw new ImplerException("Error with writing output file");
         }
 
     }
 
 
-    private String getGeneratedClass(Class<?> token) throws ImplerException {
+    private String getGeneratedClass(Class<?> token) {
         StringBuilder generated = new StringBuilder();
 
 
@@ -181,21 +183,20 @@ public class Implementor implements Impler {
                 .map(GeneratedMethod::new)
                 .forEach(element -> implementedMethodsMap.put(element.getDeclaration(), element));
 
-        //Arrays.stream(token.getMethods()).forEach(System.out::println);
-        //Arrays.stream(token.getDeclaredMethods()).forEach(System.out::println);
-
         while (token != null) {
-            //System.out.println("Generating for class " + token.getSimpleName() + ", interfaces: " + Arrays.toString(token.getInterfaces()));
             Stream.concat(
                     Arrays.stream(token.getDeclaredMethods()),
                     Arrays.stream(token.getMethods()))
-                    .distinct()
+            //        .distinct()
                     .map(GeneratedMethod::new)
                     .forEach(element -> {
                         if (!implementedMethodsMap.containsKey(element.getDeclaration())) {
                             implementedMethodsMap.put(element.getDeclaration(), element);
                         }
                     });
+
+//            addMethods(token.getDeclaredMethods());
+//            addMethods(token.getMethods());
             token = token.getSuperclass();
         }
 
@@ -209,6 +210,16 @@ public class Implementor implements Impler {
 
         return toUnicode(generated.append("}").toString());
     }
+
+
+//    private void addMethods(final Method[] methods){
+//        Arrays.stream(methods).map(GeneratedMethod::new)
+//                .forEach(element -> {
+//                    if (!implementedMethodsMap.containsKey(element.getDeclaration())) {
+//                        implementedMethodsMap.put(element.getDeclaration(), element);
+//                    }
+//                });
+//    }
 
 
     private void addClassDeclaration(Class<?> cls, StringBuilder generated) {
@@ -263,7 +274,7 @@ public class Implementor implements Impler {
         }
     }
 
-    private Path getPathToCreatedJavaFile(Class cls, Path path) {
+    private Path getPathToJavaFile(Class cls, Path path) {
         return path
                 .resolve(cls.getPackageName().replace('.', File.separatorChar))
                 .resolve(implementedClassName.apply(cls) + ".java");
@@ -280,8 +291,6 @@ public class Implementor implements Impler {
             return;
         }
 
-//        System.out.println("[main] Input arguments: " + Arrays.toString(args));
-
         Impler implementor = new Implementor();
 
         try {
@@ -293,5 +302,4 @@ public class Implementor implements Impler {
         }
 
     }
-
 }
