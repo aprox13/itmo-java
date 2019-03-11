@@ -97,7 +97,7 @@ fi
 
 javac -Xlint:unchecked ru/ifmo/rain/$USER/$TASK_PACKAGE/*.java 
 if [ $CP_ONLY -ne 1 ]; then
- java -cp C:/Users/Roman/Desktop/University/Course_2/java/hw/run/info.kgeorgiy.kgeorgiy.java.advanced.implementor.jar;. -p . -m info.kgeorgiy.java.advanced.$TASK_PACKAGE $TEST_CLASS ru.ifmo.rain.$USER.$TASK_PACKAGE.$SOLVE
+ java -cp . -p . -m info.kgeorgiy.java.advanced.$TASK_PACKAGE $TEST_CLASS ru.ifmo.rain.$USER.$TASK_PACKAGE.$SOLVE
 fi
 
 

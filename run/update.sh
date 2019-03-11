@@ -38,6 +38,7 @@ fi
 
 if [ $CODE -eq 1 ]; then 
 	cp -r "../src/ru/" "./"
+	cp -r "../src/info/" "./"
 fi
 
 

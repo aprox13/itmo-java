@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cd58f17-0b7b-4cd9-a86e-e39ef58afbc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/package-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/belyaev/implementor/Implementor$GeneratedMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/belyaev/implementor/Implementor$GeneratedMethod.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/belyaev/implementor/Implementor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/belyaev/implementor/Implementor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/test/implementor/GenericTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/test/implementor/GenericTestImpl$m.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/test/implementor/GenericTestImpl$p.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hw/ru/ifmo/rain/test/implementor/GenericTestImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/clear.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run/clear.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/implementor/Impler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/implementor/ImplerException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/implementor/JarImpler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/student/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/student/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/student/StudentGroupQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/info/kgeorgiy/java/advanced/student/StudentQuery.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/update.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run/update.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/A.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/B.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/C.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/GenericTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/GenericTestImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimpl/javax/imageio/IIOImageImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimpl/javax/management/remote/rmi/RMIServerImplImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testimpl/ru/ifmo/rain/test/implementor/GenericTestImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Implementor.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,20 +32,23 @@
     <session id="74018095">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,13 +60,13 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="130" />
+          <entry key="JAVA" value="135" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15624" />
+          <entry key="JAVA" value="18181" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -74,98 +74,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/concurrent/ListIP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java">
+        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/concurrent/IterativeParallelism.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="312" column="106" selection-start-line="312" selection-start-column="106" selection-end-line="312" selection-end-column="106" />
+            <state relative-caret-position="306">
+              <caret line="81" column="127" selection-start-line="81" selection-start-column="127" selection-end-line="81" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2648#2649#0" expanded="true" />
-                <element signature="e#2690#2691#0" expanded="true" />
-                <element signature="e#2848#2849#0" expanded="true" />
-                <element signature="e#2893#2894#0" expanded="true" />
-                <element signature="e#7711#7712#0" expanded="true" />
-                <element signature="e#7769#7770#0" expanded="true" />
-                <element signature="e#7914#7915#0" expanded="true" />
-                <element signature="e#7979#7980#0" expanded="true" />
-                <element signature="e#18445#18446#0" expanded="true" />
-                <element signature="e#18476#18477#0" expanded="true" />
+                <marker date="1552324766264" expanded="true" signature="4072:4268" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Implementor.java">
+        <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/concurrent/ScalarIP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="28" selection-start-line="28" selection-end-line="30" selection-end-column="3" />
+            <state relative-caret-position="-107">
+              <caret line="43" column="43" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1039#1040#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#2176#2177#0" expanded="true" />
-                <element signature="e#2230#2231#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/JarImpler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/package-info.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/javax/annotation/processing/Completions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5559">
-              <caret line="371" column="14" selection-start-line="371" selection-start-column="14" selection-end-line="371" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/reflect/Modifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5270">
-              <caret line="364" column="29" selection-start-line="364" selection-start-column="29" selection-end-line="364" selection-end-column="29" />
-              <folding>
-                <element signature="e#14127#14128#0" expanded="true" />
-                <element signature="e#14165#14166#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5372">
-              <caret line="381" column="53" selection-start-line="381" selection-start-column="53" selection-end-line="381" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -175,8 +116,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -197,6 +138,9 @@
       <find>Implementor(</find>
       <find>implementJ</find>
       <find>tt</find>
+      <find>t</find>
+      <find>getFile</find>
+      <find>toUn</find>
     </findStrings>
     <replaceStrings>
       <replace>b</replace>
@@ -249,6 +193,11 @@
         <option value="$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/JarImpler.java" />
         <option value="$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Implementor.java" />
         <option value="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java" />
+        <option value="$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/ListIp.java" />
+        <option value="$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/concurrent/ScalarIP.java" />
+        <option value="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/IterativeParallelism.java" />
+        <option value="$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/concurrent/IterativeParallelism.java" />
+        <option value="$PROJECT_DIR$/../../../../Projects/Java/testJarModule/app/Main.java" />
       </list>
     </option>
   </component>
@@ -271,7 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,53 +243,32 @@
               <item name="hw" type="b2602c69:ProjectViewProjectNode" />
               <item name="hw" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="implementor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rain" type="462c0819:PsiDirectoryNode" />
               <item name="belyaev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="rain" type="462c0819:PsiDirectoryNode" />
-              <item name="belyaev" type="462c0819:PsiDirectoryNode" />
-              <item name="implementor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Roman/Desktop/University/Course_2/java/hw/testimpl/ru/ifmo/rain/test/implementor/GenericTestImpl.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552297547458" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552332193803" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ru.ifmo.rain.test.implementor" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Roman\Desktop\University\Course_2\java\hw\src\info\kgeorgiy\java\advanced\student" />
       <recent name="C:\Users\Roman\Desktop\University\Course_2\java\hw\src" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="info.kgeorgiy.java.advanced.concurrent" />
+      <recent name="ru.ifmo.rain.test.implementor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -355,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ImplementorFinal">
+  <component name="RunManager" selected="Application.IterativeParallelism">
     <configuration name="GenericTestImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.ifmo.rain.test.implementor.GenericTestImpl" />
       <module name="hw" />
@@ -383,20 +311,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImplementorDOG" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ru.ifmo.rain.test.implementor.Implementor" />
-      <module name="hw" />
-      <option name="PROGRAM_PARAMETERS" value="ru.ifmo.rain.test.implementor.acabc testimpl/" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.ifmo.rain.test.implementor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ImplementorFinal" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ru.ifmo.rain.belyaev.implementor.Implementor" />
       <module name="hw" />
@@ -404,6 +318,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.ifmo.rain.belyaev.implementor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IterativeParallelism" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.ifmo.rain.belyaev.concurrent.IterativeParallelism" />
+      <module name="hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.ifmo.rain.belyaev.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -427,17 +354,17 @@
     <list>
       <item itemvalue="Application.Temp" />
       <item itemvalue="Application.Implementor (1)" />
-      <item itemvalue="Application.ImplementorDOG" />
       <item itemvalue="Application.ImplementorFinal" />
       <item itemvalue="Application.GenericTestImpl" />
+      <item itemvalue="Application.IterativeParallelism" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IterativeParallelism" />
         <item itemvalue="Application.ImplementorFinal" />
         <item itemvalue="Application.GenericTestImpl" />
         <item itemvalue="Application.Implementor (1)" />
         <item itemvalue="Application.Temp" />
-        <item itemvalue="Application.ImplementorDOG" />
       </list>
     </recent_temporary>
   </component>
@@ -462,18 +389,20 @@
       <workItem from="1551424649484" duration="823000" />
       <workItem from="1551697032308" duration="4763000" />
       <workItem from="1552128685915" duration="2226000" />
-      <workItem from="1552285864539" duration="7253000" />
+      <workItem from="1552285864539" duration="9834000" />
+      <workItem from="1552309203952" duration="88000" />
+      <workItem from="1552313360528" duration="1215000" />
+      <workItem from="1552319144338" duration="8490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66257000" />
+    <option name="totallyTimeSpent" value="78631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29127517" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.110067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -482,16 +411,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44397163" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31205675" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.22411348" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,6 +469,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/concurrent/IterativeParallelism.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="implementedMethodsMap" language="JAVA" />
@@ -556,30 +495,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="1500" column="15" selection-start-line="1500" selection-start-column="15" selection-end-line="1500" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/Impler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8075">
-          <caret line="648" column="17" selection-start-line="648" selection-start-column="17" selection-end-line="648" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testimpl/ru/ifmo/rain/test/implementor/TestClassImpl.java" />
-    <entry file="file://$PROJECT_DIR$/testimpl/ru/ifmo/rain/test/implementor/TestAbstractImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/TestAbstract.java" />
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/TestClass.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,6 +605,25 @@
     <entry file="file://$PROJECT_DIR$/testimpl/javax/annotation/processing/CompletionsImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Base.java" />
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/ext.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/javax/tools/Tool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run/mama/papa/dada/java/lang/ObjectImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="472" column="7" selection-start-line="472" selection-start-column="7" selection-end-line="472" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Implementor.java" />
     <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/JarImpler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -699,6 +633,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/package-info.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/javax/annotation/processing/Completions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -711,10 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5270">
           <caret line="364" column="29" selection-start-line="364" selection-start-column="29" selection-end-line="364" selection-end-column="29" />
-          <folding>
-            <element signature="e#14127#14128#0" expanded="true" />
-            <element signature="e#14165#14166#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,54 +662,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/javax/tools/Tool.java">
+    <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/concurrent/ScalarIP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.compiler/javax/annotation/processing/Completions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/test/implementor/Implementor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" selection-start-line="28" selection-end-line="30" selection-end-column="3" />
+        <state relative-caret-position="-107">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#2176#2177#0" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/implementor/Implementor.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Boolean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="312" column="106" selection-start-line="312" selection-start-column="106" selection-end-line="312" selection-end-column="106" />
+        <state relative-caret-position="153">
+          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+          <folding>
+            <element signature="e#4123#4124#0" expanded="true" />
+            <element signature="e#4151#4152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/concurrent/ListIP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2690#2691#0" expanded="true" />
-            <element signature="e#2848#2849#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#7711#7712#0" expanded="true" />
-            <element signature="e#7769#7770#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
-            <element signature="e#7979#7980#0" expanded="true" />
-            <element signature="e#18445#18446#0" expanded="true" />
-            <element signature="e#18476#18477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../Projects/Java/testJarModule/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding>
+            <element signature="e#77#78#0" expanded="true" />
+            <element signature="e#113#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/rain/belyaev/concurrent/IterativeParallelism.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="81" column="127" selection-start-line="81" selection-start-column="127" selection-end-line="81" selection-end-column="127" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1552324766264" expanded="true" signature="4072:4268" ph="..." />
           </folding>
         </state>
       </provider>

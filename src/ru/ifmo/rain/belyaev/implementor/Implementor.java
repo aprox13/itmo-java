@@ -136,7 +136,7 @@ public class Implementor implements JarImpler {
 
 
         /**
-         * Geber for {@link Executable} name
+         * Getter for {@link Executable} name
          *
          * @param executable instance of {@link Executable}
          * @return {@link String} method name if {@link Executable} instance of {@link Method}, implemented class name {@link Implementor#implementedClassName} otherwise
@@ -267,7 +267,7 @@ public class Implementor implements JarImpler {
 
         implementedMethodsMap = new HashMap<>();
 
-        root = getPathToJavaFile(token, root);
+        root = getFilePath(root, token, ".java");
         createDirectory(root);
 
         String result = getGeneratedClass(token);
@@ -279,9 +279,18 @@ public class Implementor implements JarImpler {
 
     }
 
-    private Path getFilePath(Path path, Class<?> token, String end) {
+
+    /**
+     * Return path to file, containing implementation of given class, with specific file extension
+     * located in directory represented by <b>path</b>
+     *
+     * @param path  path to parent directory of class
+     * @param token class to get name from
+     * @return {@link Path} representing path to certain file
+     */
+    private Path getFilePath(Path path, Class<?> token, String extension) {
         return path.resolve(token.getPackage().getName().replace('.', File.separatorChar))
-                .resolve(implementedClassName.apply(token) + end);
+                .resolve(implementedClassName.apply(token) + extension);
     }
 
 
@@ -321,7 +330,7 @@ public class Implementor implements JarImpler {
             String[] compilerArgs = new String[]{
                     "-cp",
                     tmpDir.toString() + File.pathSeparator + System.getProperty("java.class.path"),
-                    getPathToJavaFile(token, tmpDir).toString()
+                    getFilePath(tmpDir, token, ".java").toString()
             };
 
 
@@ -368,16 +377,16 @@ public class Implementor implements JarImpler {
 
         Constructor<?>[] constructors = token.getDeclaredConstructors();
         boolean containsConstructor = constructors.length != 0;
-        boolean containsAccessableConstructors = false;
+        boolean containsAccessibleConstructors = false;
         List<GeneratedMethod> methodList = new ArrayList<>();
         for (Constructor<?> constructor : token.getDeclaredConstructors()) {
             if (!Modifier.isPrivate(constructor.getModifiers())) {
-                containsAccessableConstructors = true;
+                containsAccessibleConstructors = true;
                 methodList.add(new GeneratedMethod(constructor));
             }
         }
 
-        assertTrue(containsConstructor != containsAccessableConstructors, e -> e, "Class contains only private constructors. Can't extend");
+        assertTrue(containsConstructor != containsAccessibleConstructors, e -> e, "Class contains only private constructors. Can't extend");
 
         methodList.forEach(element -> implementedMethodsMap.put(element.getDeclaration(), element));
 
@@ -417,7 +426,7 @@ public class Implementor implements JarImpler {
         String action = cls.isInterface() ? "implements" : "extends";
         generated
                 .append("public class ")
-                .append(cls.getSimpleName())
+                .append(cls.getCanonicalName())
                 .append("Impl ")
                 .append(action)
                 .append(" ")
@@ -438,6 +447,12 @@ public class Implementor implements JarImpler {
     }
 
 
+    /**
+     * Converting string to unicode
+     *
+     * @param in {@link String} to convert
+     * @return converted <b>in</b>
+     */
     private String toUnicode(String in) {
         StringBuilder encoded = new StringBuilder();
         in.chars().forEach(c -> {
@@ -491,21 +506,6 @@ public class Implementor implements JarImpler {
                 throw new ImplerException("Unable to create directories for output file", e);
             }
         }
-    }
-
-
-    /**
-     * Return path to file, containing implementation of given class, with specific file extension
-     * located in directory represented by <b>path</b>
-     *
-     * @param path path to parent directory of class
-     * @param cls  class to get name from
-     * @return {@link Path} representing path to certain file
-     */
-    private Path getPathToJavaFile(Class cls, Path path) {
-        return path
-                .resolve(cls.getPackageName().replace('.', File.separatorChar))
-                .resolve(implementedClassName.apply(cls) + ".java");
     }
 
 
