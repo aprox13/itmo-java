@@ -1,1 +1,0 @@
-sh run.sh --user belyaev -tp arrayset -t SortedSet --solve ArraySet $@

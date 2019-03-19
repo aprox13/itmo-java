@@ -1,1 +1,0 @@
-java -cp "C:\Users\Roman\Desktop\University\Course_2\java\hw\run\info.kgeorgiy.java.advanced.implementor.jar;." -p . -m info.kgeorgiy.java.advanced.implementor jar-class ru.ifmo.rain.belyaev.implementor.Implementor

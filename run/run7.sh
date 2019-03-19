@@ -1,1 +1,0 @@
-sh run.sh --user belyaev -tp concurrent -t list --solve IterativeParallelism $@

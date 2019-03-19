@@ -1,1 +1,0 @@
-sh run.sh --user belyaev -tp implementor -t class --solve Implementor $@
